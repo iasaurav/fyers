@@ -9,5 +9,5 @@ pairs = [('NFO-OPT','NIFTY'),('NFO-OPT','BANKNIFTY'),('NFO-OPT','FINNIFTY'),
 option = pd.concat([df[(df.segment==s)&(df.name==n)].head(1) for s,n in pairs])
 option['expiry'] = pd.to_datetime(option['expiry']).dt.strftime('%d-%m-%Y')
 option = option.sort_values(by='expiry')
-
+print(option[['name','segment','expiry','lot_size']])
 
