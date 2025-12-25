@@ -2,6 +2,7 @@
 import pandas as pd
 
 df = pd.read_csv('https://api.kite.trade/instruments')
+df=df[['name','segment','expiry','lot_size','tradingsymbol','strike','instrument_type','instrument_token','exchange_token','exchange']]
 pairs = [('NFO-OPT','NIFTY'),('NFO-OPT','BANKNIFTY'),('NFO-OPT','FINNIFTY'),
          ('BFO-OPT','SENSEX'),('BFO-OPT','BANKEX'),('MCX-OPT','CRUDEOIL')]
 
